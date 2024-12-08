@@ -48,34 +48,3 @@ Assurez-vous que votre système est configuré avec les outils suivants :
    ```bash
    git clone <URL_DU_DEPOT>
    cd task-manager
-   Installer les dépendances :
-
-bash
-Copy code
-composer install
-Configurer les variables d'environnement :
-Copiez le fichier .env et configurez la connexion à PostgreSQL :
-
-bash
-Copy code
-cp .env .env.local
-Modifiez le fichier .env.local comme suit :
-
-env
-Copy code
-DATABASE_URL="postgresql://postgres:root@127.0.0.1:5432/task_manager"
-Créer la base de données :
-
-bash
-Copy code
-php bin/console doctrine:database:create
-Appliquer les migrations pour créer les tables :
-
-bash
-Copy code
-php bin/console doctrine:migrations:migrate
-Démarrer le serveur Symfony :
-
-bash
-Copy code
-symfony server:start
